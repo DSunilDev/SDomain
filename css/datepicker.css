@@ -1,11 +1,4 @@
-/*!
- * Datepicker for Bootstrap
- *
- * Copyright 2012 Stefan Petre
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- */
+
 .datepicker {
   top: 0;
   left: 0;
@@ -86,7 +79,7 @@
 .datepicker td.active:hover[disabled] {
   color: #ffffff;
   background-color: #1A76D1;
-  *background-color: #1A76D1;
+  background-color: #1A76D1;
 }
 .datepicker td.active:active,
 .datepicker td.active:hover:active,
@@ -123,7 +116,7 @@
 .datepicker td span.active[disabled] {
   color: #ffffff;
   background-color: #0044cc;
-  *background-color: #003bb3;
+  background-color: #003bb3;
 }
 .datepicker td span.active:active,
 .datepicker td span.active.active {
