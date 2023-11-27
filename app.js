@@ -30,6 +30,11 @@ app.get('/blog',function(req,res)
     res.render('blog'); 
 })
 
+app.get('/portfolio',function(req,res)
+{
+    res.render('portfolio'); 
+})
+
 app.use(function(req,res)
 {
     res.render("404");
