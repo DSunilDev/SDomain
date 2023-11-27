@@ -13,6 +13,7 @@ app.use(express.static('fonts'));
 app.use(express.static('img'));
 app.use(express.static('imgs'));
 app.use(express.static('js'));
+app.use(express.static('mail'));
 
 
 app.get('/',function(req,res)
