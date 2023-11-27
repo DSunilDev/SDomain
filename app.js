@@ -36,6 +36,15 @@ app.get('/portfolio',function(req,res)
     res.render('portfolio'); 
 })
 
+app.get('/doctors',function(req,res)
+{
+    res.render('doctors'); 
+})
+
+app.get('/about',function(req,res){
+    res.render('about')
+})
+
 app.use(function(req,res)
 {
     res.render("404");
