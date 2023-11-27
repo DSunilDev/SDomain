@@ -20,5 +20,20 @@ app.get('/',function(req,res)
     res.render('index'); 
 })
 
+app.get('/contact',function(req,res)
+{
+    res.render('contact'); 
+})
+
+app.get('/blog',function(req,res)
+{
+    res.render('blog'); 
+})
+
+app.use(function(req,res)
+{
+    res.render("404");
+})
+
 
 app.listen(700)
