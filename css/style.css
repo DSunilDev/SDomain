@@ -783,7 +783,7 @@ body{
 	padding:120px 0;
 }
 .fun-facts{
-	background:url('img/fun-bg.jpg');
+	background:url('fun-bg.jpg');
 	background-size:cover;
 	background-repeat:no-repeat;
 }
@@ -945,7 +945,7 @@ body{
 	Start Call to action CSS
 =================================*/
 .call-action{
-	background-image:url('img/call-bg.jpg');
+	background-image:url('call-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	position:relative;
@@ -1286,7 +1286,7 @@ body{
 	Start Testimonials CSS
 ===============================*/
 .testimonials{
-	background-image:url('img/testi-bg.jpg');
+	background-image:url('testi-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -1587,7 +1587,7 @@ body{
 	Start Clients CSS
 ==========================*/
 .clients{
-	background-image:url('img/client-bg.jpg');
+	background-image:url('client-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	padding:100px 0px;
@@ -1609,7 +1609,7 @@ body{
 	Start Team CSS
 ======================*/ 
 .team{
-	background-image:url('img/testi-bg.jpg');
+	background-image:url('testi-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -2238,7 +2238,7 @@ body{
 }
 /* Blockqoute */
 .news-single blockquote {
-	background-image: url('img/blockqoute-bg.jpg');
+	background-image: url('blockqoute-bg.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -3565,7 +3565,7 @@ body{
 .about-image {
   width: 100%;
   height: 100%;
-  background-image: url(img/about-img.jpg);
+  background-image: url('about-img.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -3734,7 +3734,7 @@ body{
 .our-mission-image {
   width: 100%;
   height: 100%;
-  background-image: url(img/mission-img.jpg);
+  background-image: url('mission-img.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
