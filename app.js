@@ -14,6 +14,7 @@ app.use(express.static('img'));
 app.use(express.static('imgs'));
 app.use(express.static('js'));
 app.use(express.static('mail'));
+app.use(express.static('dicons'));
 
 
 app.get('/',function(req,res)
