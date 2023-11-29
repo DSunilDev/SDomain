@@ -1,10 +1,4 @@
-/* =====================================
-Template Name: 	Mediplus.
-Author Name: Naimur Rahman
-Website: http://wpthemesgrid.com/
-Description: Mediplus - Doctor HTML Template.
-Version:	1.1
-========================================*/   
+ 
 /* Tablet Screen */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 /* Header Sticky */
@@ -377,9 +371,7 @@ Version:	1.1
 }
 /* Mobile Screen */
 @media only screen and (max-width: 767px) {
-.header.sticky{
-	
-}
+
 .header.sticky .header-bottom{
 	position:absolute;
 	z-index:999;
@@ -434,9 +426,7 @@ Version:	1.1
 	font-size: .875em;
 	background: transparent;
 }
-.slicknav_nav li{
-	
-}
+
 .slicknav_nav li a {
 	color: #2C2D3F;
 	transition: all 0.4s ease;
