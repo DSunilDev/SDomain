@@ -886,7 +886,7 @@ body{
 .why-choose .choose-right{
 	height:100%;
 	width:100%;
-	background-image:url('ivideo-bg.jpg');
+	background-image:url('img/video-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -945,7 +945,7 @@ body{
 	Start Call to action CSS
 =================================*/
 .call-action{
-	background-image:url('call-bg.jpg');
+	background-image:url('img/call-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	position:relative;
@@ -1250,7 +1250,7 @@ body{
   font-size: 32px;
 }
 .service-details-inner-left {
-  background-image: url("signup-bg.jpg");
+  background-image: url("img/signup-bg.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1286,7 +1286,7 @@ body{
 	Start Testimonials CSS
 ===============================*/
 .testimonials{
-	background-image:url('testi-bg.jpg');
+	background-image:url('img/testi-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -1587,7 +1587,7 @@ body{
 	Start Clients CSS
 ==========================*/
 .clients{
-	background-image:url('client-bg.jpg');
+	background-image:url('img/client-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	padding:100px 0px;
@@ -1609,7 +1609,7 @@ body{
 	Start Team CSS
 ======================*/ 
 .team{
-	background-image:url('testi-bg.jpg');
+	background-image:url('img/testi-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -2238,7 +2238,7 @@ body{
 }
 /* Blockqoute */
 .news-single blockquote {
-	background-image: url('blockqoute-bg.jpg');
+	background-image: url('img/blockqoute-bg.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
