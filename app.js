@@ -16,6 +16,22 @@ app.use(express.static('imgs'));
 app.use(express.static('js'));
 app.use(express.static('mail'));
 
+function readVisitorCount() {
+    try {
+        const count = fs.readFileSync('visitor_count.txt', 'utf8');
+        return parseInt(count);
+    } catch (err) {
+        return 0;
+    }
+}
+
+function updateVisitorCount(count) {
+    try {
+        fs.writeFileSync('visitor_count.txt', count.toString(), 'utf8');
+    } catch (err) {
+        console.error('Error updating visitor count:', err);
+    }
+}
 
 
 app.get('/',function(req,res)
