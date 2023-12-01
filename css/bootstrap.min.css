@@ -235,14 +235,14 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color:#47640d;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects
 }
 
 a:hover {
-    color: #0056b3;
+    color: #94d11a;
     text-decoration: underline
 }
 
@@ -3758,7 +3758,7 @@ tbody.collapse.show {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: #007bff
+    background-color: #94d11a
 }
 
 .nav-fill .nav-item {
@@ -4615,14 +4615,14 @@ tbody.collapse.show {
 
 .badge-primary {
     color: #fff;
-    background-color: #007bff
+    background-color:#94d11a
 }
 
 .badge-primary[href]:focus,
 .badge-primary[href]:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #0062cc
+    background-color: #94d11a
 }
 
 .badge-secondary {
@@ -4900,7 +4900,7 @@ tbody.collapse.show {
     -ms-flex-pack: center;
     justify-content: center;
     color: #fff;
-    background-color: #007bff
+    background-color: #94d11a
 }
 
 .progress-bar-striped {
