@@ -36,7 +36,10 @@ function updateVisitorCount(count) {
 
 app.get('/',function(req,res)
 {
-    res.render('index'); 
+    let visitorCount = readVisitorCount();
+    visitorCount++; // Increment the visitor count
+    updateVisitorCount(visitorCount);
+    res.render('index', { visitorCount })
 })
 
 app.get('/contact',function(req,res)
