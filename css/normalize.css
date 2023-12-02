@@ -330,7 +330,7 @@ Preloader Area CSS
   height: 100%;
   width: 60%;
   z-index: -1;
-  background: #94d11a;
+  background: #507606;
   -webkit-transition: .9s;
   transition: .9s;
 }
@@ -491,7 +491,7 @@ Preloader Area CSS
 	top:0;
 	height:100%;
 	width:100%;
-	background:#94d11a;
+	background:#507606;
 	opacity:0.8;
 }
 /* Bread Crumbs */
@@ -574,7 +574,7 @@ Preloader Area CSS
 	border-radius: 4px;
 }
 .pagination .pagination-list li.active a,.pagination .pagination-list li:hover a{
-	background:#94d11a;
+	background:#507606;
 	color: #fff;
 	border-color: transparent;
 }
@@ -854,7 +854,7 @@ a:hover, a:active {
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	clip-path: none;
-	color: #94d11a;
+	color: #507606;
 	display: block;
 	font-size: 14px;
 	font-size: 0.875rem;
