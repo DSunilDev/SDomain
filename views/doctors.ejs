@@ -1,3 +1,48 @@
+<style>
+    .main {
+        position: relative;
+    }
+
+    .bodyg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        text-align: center;
+        color:white !important;
+        font-size: 10px !important;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    }
+    .main:hover .head img {
+        opacity: 0.3; /* Adjust the opacity value as needed */
+    }
+
+    .main:hover .bodyg,
+    .main.clicked .bodyg {
+        opacity: 1;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var main = document.querySelector(".main");
+
+        main.addEventListener("click", function () {
+            main.classList.toggle("active");
+        });
+
+        main.addEventListener("mouseenter", function () {
+            main.classList.add("hovered");
+        });
+
+        main.addEventListener("mouseleave", function () {
+            main.classList.remove("hovered");
+        });
+    });
+    </script>
+
 <%- include('navbar') %>
 <br><br>
 <div class="container">
@@ -21,6 +66,10 @@
             <h4>Chairman</h4>
            <h4>Consultant - Pediatrician</h4>
         </div>
+        <div class="bodyg">
+            <h4>Dr. Marimuthu M.B.B.S.,D.CH(Pediatrician), Graduated from Madurai medical college is the founder and esteemed Chief Doctor at Saravana Hospital, leads with a wealth of medical expertise and a compassionate touch. Under his guidance, the hospital has flourished as a center of excellence in healthcare.</h4>
+              <h4> Dr. Marimuthu's commitment to patients well-being extends beyond routine care, and his leadership sets the tone for the hospital's dedication to providing top-tier medical services</h4>
+        </div>
     </div>
 </center>
 </div>	
@@ -31,12 +80,16 @@
     <div class="main">
         <center>
         <div class="head">
-            <img src="d2.jpg" alt="#" height="500px" width="420px"/>
+            <img src="d2.jpg" alt="#" height="600px" width="520px"/>
         </div>
         <br>
         <div class="body">
             <h3>Dr.M.Thilagavathi</h3>
             <h4>Consultant - Obstetrics and Gynaecologist</h4>
+        </div>
+        <div class="bodyg">
+            <h4>Consultant Obstetrics and Gynecologist, Graduated from Tirunelveli Medical college is a valued member of Saravana Hospital's medical team, who contributes significantly to the hospital's reputation for outstanding healthcare. Her proficiency in various medical domains, coupled with a compassionate approach, makes her an indispensable asset. </h4>
+            <h4>Patients consistently praise Dr. Thilagavathi for her thoroughness and personalized attention, exemplifying the hospital's commitment to delivering healthcare services with a human touch</h4>
         </div>
     </div>
 </center>
@@ -55,6 +108,11 @@
             <h3>Dr.M.Sri Dhivya </h3>
             <h4>General and Emergency Physician</h4>
         </div>
+        <div class="bodyg">
+            <h4>Dr.M.Sri Divya M.B.B.S.,M.EM(Emergency), Graduated from Meenakshi Mission Hospital,Madurai, 
+                The Emergency Physician at Saravana Hospital, plays a crucial role in handling critical medical situations with precision and urgency.Saved 100+ Acute life threatening emergencies. </h4>
+                <h4>Her quick thinking and extensive medical knowledge make her an invaluable resource during emergencies. Sri Divya's dedication reflects the hospital's commitment to being a reliable lifeline during moments of medical crisis</h4>
+            </div>
     </div>
 </center>
 </div>
@@ -65,10 +123,15 @@
         <div class="head">
             <img src="d5.jpg" alt="#" height="500px" width="427px"/>
         </div>
-        <br>
+        <br><br>
         <div class="body">
             <h3>Dr.D.Mithun Govind</h3>
             <h4>Minimal Access Surgeon </h4>
+        </div>
+        <div class="bodyg">
+         <h4>Dr.Mithun Govind M.B.B.S MS,FMAS.,DMAS,FALS,FICRS 
+            A university topper and Gold medalist,A skilled surgeon and dedicated member of the medical team, operated on 1000's of cases and brought smiles on patients with low cost and premium standard protocols during surgery.He expertises in Minimal access surgeries. </h4>
+        <h4> Specializing in General and laparoscopic surgeries, Dr. Mithun Govind ensures that patients receive expert care and precision during surgical procedures. His commitment to staying updated on the latest medical advancements underscores the hospital's vision for providing comprehensive and progressive medical services</h4>  
         </div>
     </div>
 </center>
