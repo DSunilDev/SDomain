@@ -67,6 +67,11 @@ app.get('/about',function(req,res){
     res.render('about')
 })
 
+app.get('/sitemap',function(req,res)
+{
+    res.render('sitemap.xml')
+})
+
 app.use(function(req,res)
 {
     res.render("404");
