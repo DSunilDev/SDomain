@@ -3,45 +3,110 @@
         position: relative;
     }
 
-    .bodyg {
+    .container {
+        position: relative;
+        perspective: 1000px;
+    }
+
+    .head {
+        position: relative;
+    }
+
+    .head img {
+        max-width: 100%;
+        height: auto;
+        z-index: 1;
+        transition: transform 0.5s ease-in-out;
+        cursor: pointer; /* Set cursor to pointer */
+    }
+
+    .head::after {
+        content: "";
+        position: absolute;
+        top: -2px; /* Adjust the top and left to create the border */
+        left: -2px;
+        width: calc(100% + 4px); /* Adjust the width and height to include the border */
+        height: calc(100% + 4px);
+        background-color: green;
+        border: 2px solid white; /* Add a 2px white border */
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        pointer-events: none;
+        z-index: 2; /* Set a higher z-index to cover the image */
+        border-radius: 10px; /* Add border-radius for curved edges */
+    }
+
+    .main.active .head img {
+        transform: scaleX(-1);
+    }
+
+    .main.active .head::after {
+        opacity: 1;
+    }
+
+    .main .bodyg {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
-        transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
         text-align: center;
-        color:white !important;
-        font-size: 10px !important;
+        color: white;
+        font-size: 10px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-    }
-    .main:hover .head img {
-        opacity: 0.3; /* Adjust the opacity value as needed */
+        z-index: 3;
+        padding:10px;
     }
 
-    .main:hover .bodyg,
-    .main.clicked .bodyg {
+    .main.active .bodyg {
         opacity: 1;
+    }
+
+    @media only screen and (max-width: 767px) {
+        .main {
+            margin-bottom: 90px; 
+            margin-top:90px;/* Adjust the margin to increase spacing between doctors */
+        }
+        .main .bodyg {
+            font-size: 8px; /* Adjust font size for smaller screens */
+        }
+        .body.hide-on-mobile {
+            display: none;
+        }
+        
     }
 </style>
 
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        var main = document.querySelector(".main");
+        var mains = document.querySelectorAll(".main");
 
-        main.addEventListener("click", function () {
-            main.classList.toggle("active");
-        });
+        mains.forEach(function (main) {
+            main.addEventListener("click", function () {
+                main.classList.toggle("active");
 
-        main.addEventListener("mouseenter", function () {
-            main.classList.add("hovered");
-        });
+                // Get the .body element inside the current .main
+                var body = main.querySelector(".body");
 
-        main.addEventListener("mouseleave", function () {
-            main.classList.remove("hovered");
+                // Toggle a class to hide/show the name and details on mobile
+                body.classList.toggle("hide-on-mobile", main.classList.contains("active"));
+            });
+
+            main.addEventListener("mouseenter", function () {
+                main.classList.add("hovered");
+            });
+
+            main.addEventListener("mouseleave", function () {
+                main.classList.remove("hovered");
+            });
         });
     });
-    </script>
+</script>
+
+
+
 
 <%- include('navbar') %>
 <br><br>
@@ -80,7 +145,7 @@
     <div class="main">
         <center>
         <div class="head">
-            <img src="d2.jpg" alt="#" height="600px" width="520px"/>
+            <img src="d2.jpg" alt="#" height="700px" width="520px"/>
         </div>
         <br>
         <div class="body">
@@ -88,8 +153,8 @@
             <h4>Consultant - Obstetrics and Gynaecologist</h4>
         </div>
         <div class="bodyg">
-            <h4>Consultant Obstetrics and Gynecologist, Graduated from Tirunelveli Medical college is a valued member of Saravana Hospital's medical team, who contributes significantly to the hospital's reputation for outstanding healthcare. Her proficiency in various medical domains, coupled with a compassionate approach, makes her an indispensable asset. </h4>
-            <h4>Patients consistently praise Dr. Thilagavathi for her thoroughness and personalized attention, exemplifying the hospital's commitment to delivering healthcare services with a human touch</h4>
+            <h5>Consultant Obstetrics and Gynecologist, Graduated from Tirunelveli Medical college is a valued member of Saravana Hospital's medical team, who contributes significantly to the hospital's reputation for outstanding healthcare. Her proficiency in various medical domains, coupled with a compassionate approach, makes her an indispensable asset</h5>
+           <h5> Patients consistently praise Dr. Thilagavathi for her thoroughness and personalized attention</h5>
         </div>
     </div>
 </center>
@@ -101,9 +166,8 @@
     <div class="main">
         <center>
         <div class="head">
-            <img src="m3.jpg" alt="#" height="300px" width="320px"/>
+            <img src="m3.jpg" alt="#" height="700px" width="520px"/>
         </div>
-        <br>
         <div class="body">
             <h3>Dr.M.Sri Dhivya </h3>
             <h4>General and Emergency Physician</h4>
@@ -121,9 +185,8 @@
     <div class="main">
         <center>
         <div class="head">
-            <img src="d5.jpg" alt="#" height="500px" width="427px"/>
+            <img src="d5.jpg" alt="#" height="700px" width="427px"/>
         </div>
-        <br><br>
         <div class="body">
             <h3>Dr.D.Mithun Govind</h3>
             <h4>Minimal Access Surgeon </h4>
@@ -131,7 +194,7 @@
         <div class="bodyg">
          <h4>Dr.Mithun Govind M.B.B.S MS,FMAS.,DMAS,FALS,FICRS 
             A university topper and Gold medalist,A skilled surgeon and dedicated member of the medical team, operated on 1000's of cases and brought smiles on patients with low cost and premium standard protocols during surgery.He expertises in Minimal access surgeries. </h4>
-        <h4> Specializing in General and laparoscopic surgeries, Dr. Mithun Govind ensures that patients receive expert care and precision during surgical procedures. His commitment to staying updated on the latest medical advancements underscores the hospital's vision for providing comprehensive and progressive medical services</h4>  
+        <h4> Specializing in General and laparoscopic surgeries, Dr. Mithun Govind ensures that patients receive expert care and precision during surgical procedures.</h4>  
         </div>
     </div>
 </center>
