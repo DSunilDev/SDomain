@@ -63,6 +63,10 @@ app.get('/doctors',function(req,res)
     res.render('doctors'); 
 })
 
+app.get('/DrMithunGovind',function(req,res){
+    res.render('mithun')
+})
+
 app.get('/about',function(req,res){
     res.render('about')
 })
