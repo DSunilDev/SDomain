@@ -76,8 +76,6 @@ app.get('/LaparascopicSurgery',function(req,res){
     res.render('surgery')
 })
 
-
-
 app.get('/sitemap', function(req, res) {
     // Assuming 'sitemap.xml' is in the root directory of your project
     const filePath = __dirname + '/sitemap.xml';
@@ -113,6 +111,5 @@ app.use(function(req,res)
 {
     res.render("404");
 })
-
 
 app.listen(500)
