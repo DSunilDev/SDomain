@@ -121,21 +121,6 @@ app.get('/sitemapg', function(req, res) {
 
 app.get('/sitemaps', function(req, res) {
     // Assuming 'sitemap.xml' is in the root directory of your project
-    const filePath = __dirname + '/sitemaps.xml';
-    
-    fs.readFile(filePath, 'utf8', function(err, data) {
-        if (err) {
-            console.error('Error reading sitemap.xml:', err);
-            res.status(500).send('Internal Server Error');
-        } else {
-            res.set('Content-Type', 'application/xml');
-            res.send(data);
-        }
-    });
-});
-
-app.get('/sitemapm', function(req, res) {
-    // Assuming 'sitemap.xml' is in the root directory of your project
     const filePath = __dirname + '/sitemapm.xml';
     
     fs.readFile(filePath, 'utf8', function(err, data) {
