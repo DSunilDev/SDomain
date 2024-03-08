@@ -76,6 +76,19 @@ app.get('/LaparascopicSurgery',function(req,res){
     res.render('surgery')
 })
 
+app.get('/HerniaSurgery',function(req,res){
+    res.render('hsurgery')
+})
+
+app.get('/LaserSurgery',function(req,res){
+    res.render('lsurgery')
+})
+
+app.get('/PediatricSurgery',function(req,res){
+    res.render('psurgery')
+})
+
+
 app.get('/sitemap', function(req, res) {
     // Assuming 'sitemap.xml' is in the root directory of your project
     const filePath = __dirname + '/sitemap.xml';
@@ -109,6 +122,21 @@ app.get('/sitemapg', function(req, res) {
 app.get('/sitemaps', function(req, res) {
     // Assuming 'sitemap.xml' is in the root directory of your project
     const filePath = __dirname + '/sitemaps.xml';
+    
+    fs.readFile(filePath, 'utf8', function(err, data) {
+        if (err) {
+            console.error('Error reading sitemap.xml:', err);
+            res.status(500).send('Internal Server Error');
+        } else {
+            res.set('Content-Type', 'application/xml');
+            res.send(data);
+        }
+    });
+});
+
+app.get('/sitemapm', function(req, res) {
+    // Assuming 'sitemap.xml' is in the root directory of your project
+    const filePath = __dirname + '/sitemapm.xml';
     
     fs.readFile(filePath, 'utf8', function(err, data) {
         if (err) {
