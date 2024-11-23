@@ -10,6 +10,7 @@ app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
 
 app.use(express.static('dicons'));
+app.use(express.static('videos'));
 app.use(express.static('css'));
 app.use(express.static('fonts'));
 app.use(express.static('img'));

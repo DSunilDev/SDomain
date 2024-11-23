@@ -161,53 +161,78 @@
 			</div>
 		</div>
 		<!--/ End Fun-facts -->
-		
-		<div style="text-align: center; margin: 20px;">
+
+		<div class="testimonials">
 			<h2>What Our Patients Say</h2>
-			<p>Here are some heartfelt testimonials from our valued patients.</p>
-		
-			<!-- Video Player -->
-			<div class="video-container" style="max-width: 600px; margin: 20px auto;">
-				<video id="testimonialVideo" controls autoplay muted style="width: 100%; max-width: 600px;">
-					<source src="../imgs/t3.mp4" type="video/mp4">
-					Your browser does not support the video tag.
-				</video>
-			</div>
-		
-			<!-- Navigation Buttons -->
-			<div class="navigation-buttons" style="margin-top: 10px;">
-				<button onclick="previousVideo()" style="margin: 0 10px; padding: 10px 20px; font-size: 16px;">Previous</button>
-				<button onclick="nextVideo()" style="margin: 0 10px; padding: 10px 20px; font-size: 16px;">Next</button>
+			<div class="video-container">
+				<!-- Testimonial Video 1 -->
+				<div class="video-item">
+					<video controls width="100%">
+						<source src="t1.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<!-- Testimonial Video 2 -->
+				<div class="video-item">
+					<video controls width="100%">
+						<source src="t2.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
+				<!-- Testimonial Video 3 -->
+				<div class="video-item">
+					<video controls width="100%">
+						<source src="t3.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+				</div>
 			</div>
 		</div>
 		
-		<script>
-			// Video files array
-			const videos = ["../imgs/t3.mp4", "../imgs/t1.mp4", "../imgs/t2.mp4"];
-			let currentVideoIndex = 0;
-		
-			const videoElement = document.getElementById("testimonialVideo");
-		
-			function updateVideo() {
-				videoElement.src = videos[currentVideoIndex];
-				videoElement.play();
+		<style>
+			.testimonials {
+				text-align: center;
+				margin: 20px auto;
+				font-family: Arial, sans-serif;
+				padding: 20px;
 			}
 		
-			function previousVideo() {
-				currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
-				updateVideo();
+			.testimonials h2 {
+				font-size: 24px;
+				margin-bottom: 10px;
 			}
 		
-			function nextVideo() {
-				currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-				updateVideo();
+			.testimonials p {
+				font-size: 16px;
+				margin-bottom: 20px;
 			}
-		</script>
 		
-
-
-
-
+			.video-container {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 20px;
+			}
+		
+			.video-item {
+				border: 1px solid #ddd;
+				border-radius: 5px;
+				padding: 10px;
+				box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			}
+		
+			.video-item video {
+				display: block;
+				margin: 0 auto;
+				border-radius: 5px;
+			}
+		
+			.video-item p {
+				margin-top: 10px;
+				font-size: 14px;
+				color: #555;
+			}
+		</style>
+		
 				<!-- Start Appointment -->
 		<section class="appointment">
 			<div class="container">
