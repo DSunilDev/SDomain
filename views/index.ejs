@@ -161,41 +161,52 @@
 			</div>
 		</div>
 		<!--/ End Fun-facts -->
-		<!-- Start Testimonial Section -->
-<section class="testimonial section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <h2>What Our Patients Say</h2>
-                    <img src="section-img.png" alt="#">
-                    <p>Real stories from patients about their healing journey</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-12">
-                <div class="owl-carousel testimonial-slider">
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/video2" title="Testimonial 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/video3" title="Testimonial 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            
-                    </div>
-                    <!-- Single Testimonial -->
-                    <div class="single-testimonial">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/video4" title="Testimonial 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		
+		<div style="text-align: center; margin: 20px;">
+			<h2>What Our Patients Say</h2>
+			<p>Here are some heartfelt testimonials from our valued patients.</p>
+		
+			<!-- Video Player -->
+			<div class="video-container" style="max-width: 600px; margin: 20px auto;">
+				<video id="testimonialVideo" controls autoplay muted style="width: 100%; max-width: 600px;">
+					<source src="../imgs/t3.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+		
+			<!-- Navigation Buttons -->
+			<div class="navigation-buttons" style="margin-top: 10px;">
+				<button onclick="previousVideo()" style="margin: 0 10px; padding: 10px 20px; font-size: 16px;">Previous</button>
+				<button onclick="nextVideo()" style="margin: 0 10px; padding: 10px 20px; font-size: 16px;">Next</button>
+			</div>
+		</div>
+		
+		<script>
+			// Video files array
+			const videos = ["../imgs/t3.mp4", "../imgs/t1.mp4", "../imgs/t2.mp4"];
+			let currentVideoIndex = 0;
+		
+			const videoElement = document.getElementById("testimonialVideo");
+		
+			function updateVideo() {
+				videoElement.src = videos[currentVideoIndex];
+				videoElement.play();
+			}
+		
+			function previousVideo() {
+				currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+				updateVideo();
+			}
+		
+			function nextVideo() {
+				currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+				updateVideo();
+			}
+		</script>
+		
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--/ End Testimonial Section -->
+
+
 
 				<!-- Start Appointment -->
 		<section class="appointment">
